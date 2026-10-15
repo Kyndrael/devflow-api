@@ -1,5 +1,39 @@
 # DevFlow API
 
+API REST para gerenciamento de tarefas, desenvolvida com Java e Spring Boot, com foco em boas práticas de desenvolvimento e aplicação de Design Patterns.
+
+## Tecnologias
+
+- Java 17
+- Spring Boot
+- Maven
+- Spring Data JPA
+- H2 Database
+- JUnit
+
+## Funcionalidades
+
+- Criar tarefas
+- Listar tarefas
+- Consultar tarefas por ID
+- Atualizar tarefas
+- Excluir tarefas
+
+## Objetivo
+
+Projeto de estudo e portfólio para praticar desenvolvimento de APIs REST e padrões de projeto em Java.
+
+## Como executar
+
+```bash
+mvn spring-boot:run
+```
+
+## Autor
+
+Kyndrael<<<<<<< HEAD
+# DevFlow API
+
 API REST de gerenciamento de tarefas construída com Java 17, Spring Boot, Spring Data JPA e PostgreSQL (ou H2 para execução local rápida). Projeto educacional para demonstrar padrões GoF aplicados a um caso real.
 
 ## Funcionalidades
@@ -111,3 +145,7 @@ mvn test
 - Notificações reais por e-mail
 - CI com GitHub Actions
 - Perfis de configuração e logs estruturados
+=======
+# devflow-api
+API REST de gerenciamento de tarefas com Java, Spring Boot e Design Patterns GoF.
+>>>>>>> 01a214f78624a693a7ff0b969f978e57723d3494
