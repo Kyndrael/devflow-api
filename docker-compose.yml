@@ -1,0 +1,29 @@
+services:
+  devflow:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/devflow
+      DB_USERNAME: devflow
+      DB_PASSWORD: devflow
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: devflow
+      POSTGRES_USER: devflow
+      POSTGRES_PASSWORD: devflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - devflow_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devflow -d devflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  devflow_data:
